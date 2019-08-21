@@ -3,6 +3,7 @@
 
 import random
 from abc import ABCMeta, abstractmethod
+from TicTacToe import GetBroadDic
 
 ROW = COL = 3  # 棋盘大小
 SPACE = '-'  # 空格标签
@@ -104,19 +105,20 @@ class Computer(Player):
 
         pos = random.choice(my_moves)  # 随机挑出一个位置
         board[pos] = COMPUTER
-
+        print("电脑放置的位置为：",str(pos))
 
 class Human(Player):
 
     def __init__(self, chess='X'):
         Player.__init__(self, chess)
-
+        self.CurrentBroadDic=self.NowBroadDic={0:"",1:"",2:"",3:"",4:"",5:"",6:"",7:"",8:""}
     def move(self, board):
         looping = True
         while looping:
             try:
                 inp = input("请输入下棋位置[1-9]：")
-                pos = int(inp) - 1  # 输入的下标从1开始
+
+                pos = self.GetPlayerPos(inp)  # 输入的下标从1开始
                 if 0 <= pos <= 8:
                     if board[pos] == SPACE:
                         looping = False
@@ -129,6 +131,13 @@ class Human(Player):
 
         board[pos] = HUMAN
 
+    def GetPlayerPos(self,t):
+        self.CurrentBroadDic = self.NowBroadDic
+        self.NowBroadDic = GetBroadDic(t)
+        for num in range(len(self.CurrentBroadDic)):
+            if self.NowBroadDic[num] == self.chess and self.CurrentBroadDic[num] == "":
+                print("获取到当前用户下棋的位置为：",str(num))
+                return num
 
 class Game:
 
@@ -193,7 +202,6 @@ class Game:
             elif not empty(self.board):
                 print("平局！！！")
                 exit(0)
-
             # 切换玩家
             self.switch()
 
