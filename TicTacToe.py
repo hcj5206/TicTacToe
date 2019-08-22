@@ -3,7 +3,7 @@ import time
 
 import cv2
 import numpy as np
-broad=[[0,0],[1,0],[2,0],[0,1],[1,1],[2,1],[0,2],[1,1],[2,2]]
+broad=[[0,0],[1,0],[2,0],[0,1],[1,1],[2,1],[0,2],[1,2],[2,2]]
 #Find the maximum contour
 def findmaxcontour(contours):
     maxarea = 0
@@ -108,5 +108,4 @@ def GetBroadDic(path=2):
         print("Error,Get Broad_Dic error")
 
 if __name__ == '__main__':
-    for i in range(1,7):
-        print(GetBroadDic(i))
+    GetBroadDic(7)

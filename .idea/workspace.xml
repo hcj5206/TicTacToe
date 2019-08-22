@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01500cb7-9dfe-4ccf-b9a2-c0be0cedeb6e" name="Default Changelist" comment="#20190821A 添加测试图片集">
-      <change afterPath="$PROJECT_DIR$/SerialArduino.py" afterDir="false" />
+    <list default="true" id="01500cb7-9dfe-4ccf-b9a2-c0be0cedeb6e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerialArduino.py" beforeDir="false" afterPath="$PROJECT_DIR$/SerialArduino.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBorad/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TestBorad/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBorad/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBorad/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TestBorad/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBorad/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBorad/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBorad/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/takepicture.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-518">
-              <caret line="159" column="34" lean-forward="true" selection-start-line="159" selection-start-column="34" selection-end-line="159" selection-end-column="34" />
+            <state relative-caret-position="158">
+              <caret line="144" column="29" lean-forward="true" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
               <folding>
                 <element signature="e#43#56#0" expanded="true" />
               </folding>
@@ -28,11 +34,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/t1.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SerialArduino.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+            <state relative-caret-position="197">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="e#21#32#0" expanded="true" />
               </folding>
@@ -41,33 +52,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/serial/serialjava.py">
+        <entry file="file://$PROJECT_DIR$/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+            <state relative-caret-position="15">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/serial/serialutil.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="177" column="25" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TicTacToe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="90" column="46" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="46" />
+            <state relative-caret-position="196">
+              <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
               <folding>
                 <element signature="e#27#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_grid.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -106,9 +113,10 @@
       <list>
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/config.ini" />
+        <option value="$PROJECT_DIR$/SerialArduino.py" />
         <option value="$PROJECT_DIR$/TicTacToe.py" />
         <option value="$PROJECT_DIR$/game.py" />
-        <option value="$PROJECT_DIR$/SerialArduino.py" />
       </list>
     </option>
   </component>
@@ -130,11 +138,6 @@
             <path>
               <item name="TicTacToeMain" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToeMain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToeMain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToeMain" type="462c0819:PsiDirectoryNode" />
-              <item name="TestBorad" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -162,7 +165,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SerialArduino">
+  <component name="RunManager" selected="Python.game">
     <configuration name="SerialArduino" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TicTacToeMain" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -275,9 +278,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.SerialArduino" />
         <item itemvalue="Python.game" />
         <item itemvalue="Python.TicTacToe" />
+        <item itemvalue="Python.SerialArduino" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
       </list>
@@ -295,7 +298,7 @@
       <updated>1566368107203</updated>
       <workItem from="1566368108642" duration="300000" />
       <workItem from="1566368937788" duration="9140000" />
-      <workItem from="1566437854744" duration="5905000" />
+      <workItem from="1566437854744" duration="9107000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <created>1566369003530</created>
@@ -318,11 +321,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566376701364</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#20190822A 添加SerialArduino类，实现arduino与主程序的通讯，&#10;添加TicTacSlave.ino 下位机控制程序">
+      <created>1566457703601</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566457703601</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15345000" />
+    <option name="totallyTimeSpent" value="18547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -333,7 +343,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28613138" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2671533" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -358,7 +368,8 @@
     <MESSAGE value="git init" />
     <MESSAGE value="#20190821A 测试模式实现获取用户下子的位置和根据棋盘信息推算，AI选择最佳位置落子" />
     <MESSAGE value="#20190821A 添加测试图片集" />
-    <option name="LAST_COMMIT_MESSAGE" value="#20190821A 添加测试图片集" />
+    <MESSAGE value="#20190822A 添加SerialArduino类，实现arduino与主程序的通讯，&#10;添加TicTacSlave.ino 下位机控制程序" />
+    <option name="LAST_COMMIT_MESSAGE" value="#20190822A 添加SerialArduino类，实现arduino与主程序的通讯，&#10;添加TicTacSlave.ino 下位机控制程序" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -368,33 +379,26 @@
           <line>103</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TicTacToe.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TicTacToeMain$game.coverage" NAME="game Coverage Results" MODIFIED="1566443813047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TicTacToeMain$game.coverage" NAME="game Coverage Results" MODIFIED="1566460874541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TicTacToeMain$test.coverage" NAME="test Coverage Results" MODIFIED="1566372861436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TicTacToeMain$TicTacToe.coverage" NAME="TicTacToe Coverage Results" MODIFIED="1566379813476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TicTacToeMain$TicTacToe.coverage" NAME="TicTacToe Coverage Results" MODIFIED="1566459272769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TicTacToeMain$main.coverage" NAME="main Coverage Results" MODIFIED="1566377201793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TicTacToeMain$SerialArduino.coverage" NAME="SerialArduino Coverage Results" MODIFIED="1566457396600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TicTacToeMain$SerialArduino.coverage" NAME="SerialArduino Coverage Results" MODIFIED="1566458490114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/t1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestBorad/2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/X.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_grid.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_multiple.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -427,17 +431,7 @@
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/serial/serialjava.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="90" column="46" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="46" />
-          <folding>
-            <element signature="e#27#38#0" expanded="true" />
-          </folding>
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -458,22 +452,51 @@
     <entry file="file://$PROJECT_DIR$/O.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_grid.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_multiple.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerialArduino.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#21#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-518">
-          <caret line="159" column="34" lean-forward="true" selection-start-line="159" selection-start-column="34" selection-end-line="159" selection-end-column="34" />
+        <state relative-caret-position="158">
+          <caret line="144" column="29" lean-forward="true" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
           <folding>
             <element signature="e#43#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SerialArduino.py">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        <state relative-caret-position="196">
+          <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
           <folding>
-            <element signature="e#21#32#0" expanded="true" />
+            <element signature="e#27#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

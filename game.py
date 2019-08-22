@@ -124,9 +124,11 @@ class Human(Player):
         while looping:
             try:
                 a = input("请你放置棋子，放置完成后按回车结束")
+                import time
+                t=time.time()
                 pos = self.GetPlayerPos(self.inp)  # 输入的下标从1开始
+                print("耗时：",time.time()-t)
                 self.inp=self.inp+2
-                print(self.inp,pos)
                 if 0 <= pos <= 8:
                     if board[pos] == SPACE:
                         looping = False
@@ -213,5 +215,8 @@ class Game:
 
 
 if __name__ == '__main__':
-    ser = SerialArduino(port='/dev/cu.wchusbserial1410')
-    Game().start()
+    ser = SerialArduino() #尝试串口连接arduino
+    if ser.IsPortExit():
+        Game().start()
+    else:
+        print("配置文件端口号%s不存在"%ser.port,"当前所有端口为：",ser.GetAllPort())
