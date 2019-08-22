@@ -4,12 +4,12 @@
 import random
 from abc import ABCMeta, abstractmethod
 from TicTacToe import GetBroadDic
-
+from SerialArduino import SerialArduino
 ROW = COL = 3  # 棋盘大小
 SPACE = '-'  # 空格标签
 HUMAN = 'HUMAN'  # 人类棋子标签
 COMPUTER = 'COMPUTER'  # 电脑棋子标签
-
+ComputerPos=100 #初始化电脑棋子位置
 
 # 棋盘是否有空位
 def empty(board):
@@ -105,20 +105,28 @@ class Computer(Player):
 
         pos = random.choice(my_moves)  # 随机挑出一个位置
         board[pos] = COMPUTER
+        global ComputerPos
+        ComputerPos=pos
+        ser.SendByteToArduino(str(pos))
         print("电脑放置的位置为：",str(pos))
+def GetComputerPos():
+    global ComputerPos
+    return ComputerPos
 
 class Human(Player):
 
     def __init__(self, chess='X'):
         Player.__init__(self, chess)
         self.CurrentBroadDic=self.NowBroadDic={0:"",1:"",2:"",3:"",4:"",5:"",6:"",7:"",8:""}
+        self.inp = 1
     def move(self, board):
         looping = True
         while looping:
             try:
-                inp = input("请输入下棋位置[1-9]：")
-
-                pos = self.GetPlayerPos(inp)  # 输入的下标从1开始
+                a = input("请你放置棋子，放置完成后按回车结束")
+                pos = self.GetPlayerPos(self.inp)  # 输入的下标从1开始
+                self.inp=self.inp+2
+                print(self.inp,pos)
                 if 0 <= pos <= 8:
                     if board[pos] == SPACE:
                         looping = False
@@ -128,7 +136,6 @@ class Human(Player):
                     print("输入不合法：[1-9]")
             except:
                 print("输入不合法：Error")
-
         board[pos] = HUMAN
 
     def GetPlayerPos(self,t):
@@ -187,7 +194,6 @@ class Game:
     def start(self):
         # 渲染游戏
         self.render()
-
         # 游戏状态机
         while True:
             self.current_player.move(self.board)
@@ -207,4 +213,5 @@ class Game:
 
 
 if __name__ == '__main__':
+    ser = SerialArduino(port='/dev/cu.wchusbserial1410')
     Game().start()

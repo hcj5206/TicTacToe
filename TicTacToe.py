@@ -108,5 +108,5 @@ def GetBroadDic(path=2):
         print("Error,Get Broad_Dic error")
 
 if __name__ == '__main__':
-    a=GetBroadDic("2.jpg")
-    print(a)
+    for i in range(1,7):
+        print(GetBroadDic(i))
