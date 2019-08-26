@@ -3,6 +3,9 @@ import time
 
 import cv2
 import numpy as np
+import configparser
+from GetRectPos import FirstConfig
+
 broad=[[0,0],[1,0],[2,0],[0,1],[1,1],[2,1],[0,2],[1,2],[2,2]]
 #Find the maximum contour
 def findmaxcontour(contours):
@@ -43,8 +46,9 @@ def get_pos(img, chesses):
 def find_chesses(imgsrc):
     (B, G, R) = cv2.split(imgsrc)                                                                                       #Split colour into BGR channels respectively
     h, w, c = imgsrc.shape                                                                                              #Find height(row), width(column) & BGR
-    gray = R;                                                                                                           #Use red as the chesses are red
-    ret2, threshimg = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)                                  #Otsu threshold, the 2nd flag is 0 because Otus will find a optimal threshold
+    gray = R                                                                                                          #Use red as the chesses are red
+    ret2, threshimg = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
     kernel = np.ones((5, 5), np.uint8)                                                                                  #Define a kernel full of ones, size is 5x5
     open_dst = cv2.morphologyEx(threshimg, cv2.MORPH_OPEN, kernel)                                                      #Morphology to remove background noise, opening=erosion then dilation
     open_dst, contours, hierarchy = cv2.findContours(open_dst, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)              #Find contour, only the external contours is used, only endpoints are used
@@ -93,19 +97,51 @@ imgx, contoursx, hierarchyx = cv2.findContours(imgx, cv2.RETR_EXTERNAL, cv2.CHAI
 contouro = contourso[findmaxcontour(contourso)]
 contourx = contoursx[findmaxcontour(contoursx)]
 showtempo = np.zeros(imgo.shape, np.uint8)
-def GetBroadDic(path=2):
+def GetBroadDic(path):
     broad_dic={0:"",1:"",2:"",3:"",4:"",5:"",6:"",7:"",8:""} #当前棋盘信息初始化
     imagename = "./TestBorad/"+str(path)+".jpg"
-    img = cv2.imread(imagename)
-    h, w, c = img.shape
-    chesstypes, chesses = find_chesses(img)
-    points, cords,posIndex = get_pos(img, chesses)
-    try:
-        for t in range(len(posIndex)):
-            broad_dic[posIndex[t]]=chesstypes[t]
-        return broad_dic
-    except:
-        print("Error,Get Broad_Dic error")
+    if FirstConfig(imagename):
+        try:
+            img = cv2.imread(imagename)
+            x0, x1, y0, y1 = _GetRect()
+            img = img[x0:y1, x1:y1]
+            cv2.imwrite("./result/%s" % imagename, img)
+            chesstypes, chesses = find_chesses(img)
+            points, cords, posIndex = get_pos(img, chesses)
+            for t in range(len(posIndex)):
+                broad_dic[posIndex[t]] = chesstypes[t]
+            return broad_dic
+        except:
+            print("Error,Get Broad_Dic error")
+            return False
+def _GetRect():
+    cf = configparser.ConfigParser()
+    cf.read("./config.ini")
+    x0 = int(cf.get("Setting", "x0"))
+    x1 = int(cf.get("Setting", "x1"))
+    y0 = int(cf.get("Setting", "y0"))
+    y1 = int(cf.get("Setting", "y1"))
+    return x0,x1,y0,y1
+def GetBroadDicAllPath(num):
+    from GetCamera import SaveCameraPic
+    Flag,path=SaveCameraPic(num)
+    broad_dic={0:"",1:"",2:"",3:"",4:"",5:"",6:"",7:"",8:""} #当前棋盘信息初始化
+    imagename = "./"+str(path)
+    if FirstConfig(path):
+        try:
+            img = cv2.imread(imagename)
+            x0, x1, y0, y1=_GetRect()
+            img=img[x0:y1, x1:y1]
+            cv2.imwrite("./result/%s"%path, img)
+            chesstypes, chesses = find_chesses(img)
+            points, cords,posIndex = get_pos(img, chesses)
+            for t in range(len(posIndex)):
+                broad_dic[posIndex[t]]=chesstypes[t]
+            return broad_dic
+        except:
+            print("Error,Get Broad_Dic error")
+            return False
+
 
 if __name__ == '__main__':
-    GetBroadDic(7)
+    print(GetBroadDic('3'))

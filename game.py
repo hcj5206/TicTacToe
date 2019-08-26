@@ -3,7 +3,7 @@
 
 import random
 from abc import ABCMeta, abstractmethod
-from TicTacToe import GetBroadDic
+from TicTacToe import GetBroadDic, GetBroadDicAllPath
 from SerialArduino import SerialArduino
 ROW = COL = 3  # 棋盘大小
 SPACE = '-'  # 空格标签
@@ -118,7 +118,7 @@ class Human(Player):
     def __init__(self, chess='X'):
         Player.__init__(self, chess)
         self.CurrentBroadDic=self.NowBroadDic={0:"",1:"",2:"",3:"",4:"",5:"",6:"",7:"",8:""}
-        self.inp = 1
+        self.inp = 0
     def move(self, board):
         looping = True
         while looping:
@@ -128,9 +128,9 @@ class Human(Player):
                 t=time.time()
                 pos = self.GetPlayerPos(self.inp)  # 输入的下标从1开始
                 print("耗时：",time.time()-t)
-                self.inp=self.inp+2
                 if 0 <= pos <= 8:
                     if board[pos] == SPACE:
+                        self.inp = self.inp + 1
                         looping = False
                     else:
                         print("此处不允许下棋")
@@ -142,7 +142,10 @@ class Human(Player):
 
     def GetPlayerPos(self,t):
         self.CurrentBroadDic = self.NowBroadDic
-        self.NowBroadDic = GetBroadDic(t)
+        self.NowBroadDic = GetBroadDicAllPath(t)
+        while not self.NowBroadDic:
+            input("图像识别失败，请调整摄像头或纸面位置，按回车键结束。")
+            self.NowBroadDic = GetBroadDicAllPath(t)
         for num in range(len(self.CurrentBroadDic)):
             if self.NowBroadDic[num] == self.chess and self.CurrentBroadDic[num] == "":
                 print("获取到当前用户下棋的位置为：",str(num))
