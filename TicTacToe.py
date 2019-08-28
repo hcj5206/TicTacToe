@@ -104,8 +104,10 @@ def GetBroadDic(path):
         try:
             img = cv2.imread(imagename)
             x0, x1, y0, y1 = _GetRect()
-            img = img[x0:y1, x1:y1]
-            cv2.imwrite("./result/%s" % imagename, img)
+            # img = img[x0:y1, x1:y1]
+            img = img[y0:y1, x0:x1]
+
+            cv2.imwrite("./result/%s" % (str(path)+".jpg"), img)
             chesstypes, chesses = find_chesses(img)
             points, cords, posIndex = get_pos(img, chesses)
             for t in range(len(posIndex)):
@@ -131,7 +133,7 @@ def GetBroadDicAllPath(num):
         try:
             img = cv2.imread(imagename)
             x0, x1, y0, y1=_GetRect()
-            img=img[x0:y1, x1:y1]
+            img=img[y0:y1, x0:x1]
             cv2.imwrite("./result/%s"%path, img)
             chesstypes, chesses = find_chesses(img)
             points, cords,posIndex = get_pos(img, chesses)
@@ -144,4 +146,4 @@ def GetBroadDicAllPath(num):
 
 
 if __name__ == '__main__':
-    print(GetBroadDic('3'))
+    print(GetBroadDic('02'))

@@ -1,6 +1,9 @@
+import configparser
 
 import cv2
 import numpy as np
+
+
 
 current_pos = None
 tl = None
@@ -89,10 +92,10 @@ def FirstConfig(imgname):
             (B, G, R) = cv2.split(imgsrc)
             img2 = cv2.resize(imgsrc, (int(w / 5), int(h / 5)))
             pos1, pos2 = get_rect(img2)
-            x0 = pos1[1] * 5
-            y0 = pos2[1] * 5
-            x1 = pos1[0] * 5
-            y1 = pos2[0] * 5
+            x0 = pos1[0] * 5
+            y0 = pos1[1] * 5
+            x1 = pos2[0] * 5
+            y1 = pos2[1] * 5
             cf.set('Setting', 'x0', str(x0))
             cf.set('Setting', 'x1', str(x1))
             cf.set('Setting', 'y0', str(y0))
@@ -107,3 +110,15 @@ def FirstConfig(imgname):
             return False
     else:
         return True
+if __name__ == '__main__':
+
+    FirstConfig("./TestBorad/02.jpg")
+    img = cv2.imread("./TestBorad/02.jpg")
+    cf = configparser.ConfigParser()
+    cf.read("./config.ini")
+    x0 = int(cf.get("Setting", "x0"))
+    x1 = int(cf.get("Setting", "x1"))
+    y0 = int(cf.get("Setting", "y0"))
+    y1 = int(cf.get("Setting", "y1"))
+    img = img[y0:y1, x0:x1]
+    cv2.imwrite("./result/%s" % "a.jpg", img)
